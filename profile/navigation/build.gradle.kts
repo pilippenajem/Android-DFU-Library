@@ -12,7 +12,7 @@ android {
 dependencies {
     implementation(project(":profile:main"))
     implementation(project(":profile:scanner"))
-//    implementation(project(":profile:settings"))
+    implementation(project(":profile:settings"))
     implementation(project(":profile:welcome"))
 
     implementation(libs.nordic.navigation)
