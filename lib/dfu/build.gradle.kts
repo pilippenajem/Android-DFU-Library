@@ -65,7 +65,7 @@ android {
     namespace = "no.nordicsemi.android.dfu"
 
     defaultConfig {
-        minSdk = 28
+        minSdk = 21
     }
 
     compileOptions {
