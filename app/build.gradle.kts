@@ -13,6 +13,7 @@ if (gradle.startParameter.taskRequests.toString().contains("Release")) {
 android {
     namespace = "no.nordicsemi.android.dfu.app"
     defaultConfig {
+        minSdk = 28
         applicationId = "no.nordicsemi.android.dfu"
         resourceConfigurations.add("en")
     }
