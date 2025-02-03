@@ -14,7 +14,7 @@ dependencies {
     implementation(project(":lib:storage"))
     implementation(project(":lib:settings"))
     implementation(project(":profile:scanner"))
-    implementation(project(":profile:settings"))
+//    implementation(project(":profile:settings"))
     implementation(project(":profile:welcome"))
 
     implementation(libs.nordic.ui)

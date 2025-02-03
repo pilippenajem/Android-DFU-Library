@@ -65,12 +65,12 @@ android {
     namespace = "no.nordicsemi.android.dfu"
 
     defaultConfig {
-        minSdk = 18
+        minSdk = 28
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 }
 
