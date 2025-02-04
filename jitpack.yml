@@ -2,3 +2,6 @@ jdk:
   - openjdk21
 install:
   - ./gradlew :lib:dfu:assembleRelease
+artifacts:
+  - path: lib/dfu/build/aar/dfu-release.aar
+    name: dfu-release
