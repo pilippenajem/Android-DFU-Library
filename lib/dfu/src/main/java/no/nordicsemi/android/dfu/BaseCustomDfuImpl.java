@@ -435,6 +435,8 @@ import no.nordicsemi.android.dfu.internal.exception.UploadAbortedException;
 			characteristic.setValue(locBuffer);
 			gatt.writeCharacteristic(characteristic);
 		}
+//		mService.waitFor(10);	//works great at 10ms
+		mService.waitFor(5);
 	}
 
 	/**
