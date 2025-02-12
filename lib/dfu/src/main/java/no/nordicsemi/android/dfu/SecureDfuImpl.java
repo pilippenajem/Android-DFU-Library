@@ -669,15 +669,16 @@ class SecureDfuImpl extends BaseCustomDfuImpl {
 						mService.terminateConnection(gatt, DfuBaseService.ERROR_PROGRESS_LOST);
 						return;
 					}
-					// To decrease the chance of loosing data next time let's set PRN to 1.
-					// This will make the update very long, but perhaps it will succeed.
-					final int newPrn = 1;
-					if (mPacketsBeforeNotification == 0 || mPacketsBeforeNotification > newPrn) {
-						numberOfPacketsBeforeNotification = mPacketsBeforeNotification = newPrn;
-						setPacketReceiptNotifications(numberOfPacketsBeforeNotification);
-						mService.sendLogBroadcast(DfuBaseService.LOG_LEVEL_APPLICATION,
-								"Packet Receipt Notif Req (Op Code = 2) sent (Value = " + newPrn + ")");
-					}
+/// disabled to help STM32WB55 BLE communication. Notification on each exchange increases the chances of breaking the BLE timings
+//					// To decrease the chance of loosing data next time let's set PRN to 1.
+//					// This will make the update very long, but perhaps it will succeed.
+//					final int newPrn = 1;
+//					if (mPacketsBeforeNotification == 0 || mPacketsBeforeNotification > newPrn) {
+//						numberOfPacketsBeforeNotification = mPacketsBeforeNotification = newPrn;
+//						setPacketReceiptNotifications(numberOfPacketsBeforeNotification);
+//						mService.sendLogBroadcast(DfuBaseService.LOG_LEVEL_APPLICATION,
+//								"Packet Receipt Notif Req (Op Code = 2) sent (Value = " + newPrn + ")");
+//					}
 				}
 
 				// Calculate the CRC32
